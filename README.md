@@ -8,6 +8,11 @@
     |------ A.controller.ts
 ```
 
+### Require
+Install typescirpt and setup carefull for decorator
+You shoud install ts-node-dev for development
+
+
 ### Create controller
 ```typescript
 import { Controller, Get, PathParam, Post } from "fapi";
