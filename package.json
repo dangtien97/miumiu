@@ -1,6 +1,6 @@
 {
   "name": "miumiu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast API server with Typescript",
   "main": "index.js",
   "repository": "https://github.com/duongvanba/miumiu",
