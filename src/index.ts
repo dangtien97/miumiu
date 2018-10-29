@@ -1,3 +1,4 @@
+export { Require } from './params-decorators/Require';
 export { HeaderParam } from './params-decorators/HeaderParam';
 export { BodyParam } from './params-decorators/BodyParam';
 export { QueryParam } from './params-decorators/QueryParam';
