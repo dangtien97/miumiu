@@ -1,0 +1,16 @@
+{
+  "name": "fapi",
+  "version": "1.0.0",
+  "description": "Fast API server with Typescript",
+  "main": "index.js",
+  "repository": "https://github.com/duongvanba/fapi",
+  "author": "Ba <duongvanba.com@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.12.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "reflect-metadata": "^0.1.12"
+  }
+}
