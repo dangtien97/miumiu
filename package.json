@@ -1,9 +1,9 @@
 {
-  "name": "fapi",
+  "name": "miumiu",
   "version": "1.0.0",
   "description": "Fast API server with Typescript",
   "main": "index.js",
-  "repository": "https://github.com/duongvanba/fapi",
+  "repository": "https://github.com/duongvanba/miumiu",
   "author": "Ba <duongvanba.com@gmail.com>",
   "license": "MIT",
   "dependencies": {

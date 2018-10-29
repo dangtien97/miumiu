@@ -15,7 +15,7 @@ You shoud install ts-node-dev for development
 
 ### Create controller
 ```typescript
-import { Controller, Get, PathParam, Post } from "fapi";
+import { Controller, Get, PathParam, Post } from "miumiu";
 
 @Controller("/hello")
 export class AController {
@@ -39,7 +39,7 @@ export class AController {
 
 ### Create server
 ```typescript
-import { Server } from "fapi";
+import { Server } from "miumiu";
 
 new Server({port: 8080}).start();
 ```
