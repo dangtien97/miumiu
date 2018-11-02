@@ -29,7 +29,8 @@ export class Server{
 
         
 
-        const pwd = '/home/ba/Bin/livestream-viewer-api/src/micro-services/web-server/';//path.dirname(`${process.cwd()}/${process.argv[1]}`);
+        const pwd = path.dirname(`${process.cwd()}/${process.argv[1]}`);
+        
         
         const controllers : string[] = await new Promise<string[]>(s => {
             fs.readdir(`${pwd}/controllers`, (err, list) => {
