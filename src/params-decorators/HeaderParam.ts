@@ -1,8 +1,7 @@
 import { Request, Response, NextFunction} from 'express';
 import { ParamsExcuteFunction } from '../types';
+import { log, cast } from '../functions';
 
-import { log } from "./metadata";
-import { cast } from './param-cast';
 
 
 export const key = Symbol.for('HeaderParam');
@@ -14,8 +13,7 @@ export function HeaderParam(name: string){
 
 
 export const excute : ParamsExcuteFunction = async function excute  (value: any, info: any, type: any, req : any, res : Response) : Promise<any>{
-    value = req.headers[info.name];
-    return cast(value, info.name, type);
+    return cast(req.headers[info.name], info.name, type);
 }
 
 

@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction} from 'express';
 import { ParamsExcuteFunction } from '../types';
 
-import { log } from "./metadata";
+import { log } from "../functions";
 
 
 

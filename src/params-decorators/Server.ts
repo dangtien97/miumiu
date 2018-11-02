@@ -2,7 +2,7 @@ import * as express from 'express';
 import { json, urlencoded } from 'body-parser';
 import * as fs from 'fs';
 import * as path from 'path';
-import { FAPI } from './types';
+import { MIUMIU } from '../metadata';
 
 
 
@@ -46,9 +46,11 @@ export class Server{
         controllers.map( file => {
             const controller = require(`${pwd}/controllers/${file}`);
             for(let key in controller){
-                if(Reflect.getMetadata(FAPI, controller[key]) != FAPI ) continue;
-             
+                if(Reflect.getMetadata(MIUMIU, controller[key]) != MIUMIU ) continue;
+
+                
                 const {path, router} = new controller[key]();
+                
                 this.app.use(path[0] == '/'?path:'/'+path, (req, res, next) => {
                     req.ControllerParams = req.params;
                     next();

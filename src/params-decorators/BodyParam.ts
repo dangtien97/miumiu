@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction} from 'express';
 import { ParamsExcuteFunction } from '../types';
-
-import { log } from "./metadata";
-import { cast } from './param-cast';
+import { log, cast } from '../functions';
 
 
 export const key = Symbol.for('BodyParam');
