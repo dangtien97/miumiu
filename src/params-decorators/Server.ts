@@ -25,26 +25,28 @@ export class Server{
     }
 
     private async mountRoutes(){
-
-
         
+        const index = process.argv[1];
+        const basename = path.basename(index);
 
-        const pwd = path.dirname(`${process.cwd()}/${process.argv[1]}`);
-        
+        const pwd = path.relative('/', basename.match(/\.ts$/) ? path.dirname(index):index);
         
         const controllers : string[] = await new Promise<string[]>(s => {
-            fs.readdir(`${pwd}/controllers`, (err, list) => {
+            fs.readdir(`/${pwd}/controllers`, (err, list) => {
                 if(err){
                     console.error(err);  s([]);    return;
                 }
+                
                 s(list.filter( f => f.split('.').pop() == 'ts'));
             })
         });
+
+        
         
         
 
         controllers.map( file => {
-            const controller = require(`${pwd}/controllers/${file}`);
+            const controller = require(`/${pwd}/controllers/${file}`);
             for(let key in controller){
                 if(Reflect.getMetadata(MIUMIU, controller[key]) != MIUMIU ) continue;
 
